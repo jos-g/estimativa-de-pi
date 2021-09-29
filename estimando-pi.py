@@ -23,6 +23,19 @@ print ("Média Coluna 1: {}".format(media_1))
 mediana_1 = np.median(array_1)
 print("Mediana Coluna 1: {}".format(mediana_1))
 
+# variância
+var1 = np.var( array_1, ddof=1)
+print ("Variância Coluna 1: {}".format(var1))
+
+# Erros e Cálculo da estimativa 
+sig_1 = var1/np.sqrt(N) #onde N é o número de dados da amostra
+sig_2 = var2/np.sqrt(N)
+sig_total= np.sqrt((sig_1)**2 + (sig_2)**2)
+# erro da média
+erro_media = sig_t/np.sqrt(N)
+print ("Erro da média = {}".format( erro_media))
+print ("Estimativa = {:.2f) ± {:.2f}".format( np.round( media_c, 2 ), np.round( erro_media_L, 2 ) ) )
+
 # Ajuste Linear
 X = np.array([x_1,x_2,x_3,...,x_n])
 Y = np.array([y_1,y_2,y_3,...,y_n])
