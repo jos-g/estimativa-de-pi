@@ -5,10 +5,10 @@ import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import statistics as stat
-from scipy iport stats as st
+from scipy import stats as st
 ##
-arq_0 = pd.read.excel('Caminho-do-arquivo') 
-arq_0.head() 
+df = pd.read.excel('Caminho-do-arquivo') 
+df.head() 
 ## separando em arrays
 array_1 = df.iloc[:,1] 
 array_2 = df.iloc[:,2]
@@ -36,11 +36,11 @@ y_mod = a*X + b
 print(y_mod)
 
 #Diagrama de dispersão
-plt.figure( figsize=(8,8)
-plt.plot(X, Y, "o", label='Relação entre x e y')
-plt.plot(X, y_mod, "-r")
-plt.xlabel("x")
-plt.ylabel("y")
+plt.figure( figsize=(8,8))
+plt.plot(X,Y, "o", label='Relação x= (T/2π)² e Y = L')
+plt.plot(X,y_mod, "-r")
+plt.xlabel("(T/2π)² (s²)")
+plt.ylabel("Comprimento (m)")
 plt.legend()
 plt.show()
 
@@ -55,7 +55,7 @@ print ('coeficiente de determinação do ajuste {:.4f}'.format(R2))
 
 #Cálculo das incertezas em x, y, a e b  
 #incerteza y
-iny = np.sqrt((1/(n-2))*sum(SQresid) #onde n é o número de "pares ordenados"
+iny = np.sqrt((1/(n-2))*sum(SQresid))
 print(iny)
 
 #incerteza x 
@@ -85,4 +85,5 @@ print(er_0)
 #porcentagem do erro
 pg = er_0 *100
 print(pg)
+
 
