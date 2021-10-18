@@ -1,3 +1,3 @@
-Neste arquivo, mostrei como fiz o experimento de Laboratório de Física (Mecânica Física IA).
+Neste arquivo, mostrarei como fiz o primeiro experimento de Laboratório de Física (Mecânica Física IA) da UERJ.
 
 
